@@ -1,0 +1,31 @@
+/** @format */
+
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    user-select: none;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

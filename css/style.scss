@@ -1,0 +1,17 @@
+/** @format */
+
+// ! Import Global Rules
+@use "scss/layout/global-rules";
+
+// ! Import Variables
+@use "scss/variables/colors" as *;
+@use "scss/variables/times" as *;
+
+// ! Import Mixins
+@use "scss/helpers/mixin" as *;
+
+// ! Import Contact
+@use "scss/pages/contact";
+
+// ! Import Functions
+@use "scss/helpers/animation" as *;
