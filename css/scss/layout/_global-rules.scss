@@ -58,3 +58,14 @@ html {
 }
 
 // ! End Header Page
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $blue-alt-color;
+}
