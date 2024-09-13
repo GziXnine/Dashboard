@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/normalize.min.css">
   <!-- ! Font Awesome Library -->
   <link rel="stylesheet" href="css/all.min.css">
+  <!-- ! Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +26,192 @@
 </head>
 
 <body>
-
+  <div class="dashboard d-flex">
+    <!-- ! Start Sidebar -->
+    <div class="sidebar bg-white position-relative">
+      <h3 class="position-relative text-center fw-bold text-black">Allam</h3>
+      <div class="links">
+        <ul>
+          <li>
+            <a class="active d-flex align-items-center" href="index.html">
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="settings.html">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="profile.html">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="projects.html">
+              <i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="plans.html">
+              <i class="fa-solid fa-chart-simple fa-fw"></i>
+              <span>Statistics</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="courses.html">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="friends.html">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="files.html">
+              <i class="fa-regular fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-items-center" href="plans.html">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 
+        <div class="toggle-theme">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </div> 
+      -->
+      <div class="log-out">
+        <span>
+          <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
+          <a href="">Log out</a>
+        </span>
+      </div>
+    </div>
+    <!-- ! End Sidebar -->
+    <!-- ! Start Content -->
+    <div class="content">
+      <!-- ! Start Header -->
+      <div class="header bg-white d-flex justify-content-between align-items-center">
+        <div class="search position-relative">
+          <input type="text" id="keywordInput" placeholder="Type A Keyword" name="keyword">
+          <i class="fa-solid fa-search"></i>
+        </div>
+        <div class="notifications d-flex align-items-center">
+          <i class="fa-regular fa-bell fa-lg"></i>
+        </div>
+        <div class="profile">
+          <a href="profile.html">
+            <img src="images/avatar.png" alt="" />
+            <span>Allam</span>
+          </a>
+        </div>
+      </div>
+      <!-- ! End Header -->
+      <!-- ! Start Dashboard -->
+      <h1 class="position-relative header-page">Dashboard</h1>
+      <div class="dashboard">
+        <div class="wrapper">
+          <!-- ! Start Welcome Section -->
+          <div class="welcome">
+            <div class="banner d-flex justify-content-between">
+              <div>
+                <h2 class="section-header">Welcome</h2>
+                <span class="section-des">Allam</span>
+              </div>
+              <img src="images/welcome.png" alt="">
+            </div>
+            <img src="images/avatar.png" alt="" class="avatar">
+            <div class="info d-flex justify-content-around align-items-center text-center">
+              <div>Ahmed Allam<span>Front end learner</span></div>
+              <div>80<span>Projects</span></div>
+              <div>$8500<span>Earned</span></div>
+            </div>
+            <div class="link d-flex">
+              <a href="profile.html"><button class="button">Profile</button></a>
+            </div>
+          </div>
+          <!-- ! End Welcome Section -->
+          <!-- ! Start Quick Draft Section -->
+          <div class="quick-draft">
+            <div>
+              <h2 class="section-header">Quick Draft</h2>
+              <span class="section-des">Write A Draft For Your Ideas</span>
+            </div>
+            <input type="text" id="text" name="text" placeholder="Title">
+            <textarea name="userComment" id="commentArea" placeholder="Your Thought"></textarea>
+            <div class="link d-flex"></div>
+            <div class="link d-flex">
+              <a href=""><button class="button">Save</button></a>
+            </div>
+          </div>
+          <!-- ! End Quick Draft Section -->
+          <!-- ! Start Yearly Target Section -->
+          <div class="yearly-target">
+            <div>
+              <h2 class="section-header">Yearly Targets</h2>
+              <span class="section-des">Targets Of The Year</span>
+            </div>
+            <div class="prog">
+              <div class="theme d-flex align-items-center justify-content-center blue">
+                <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+              </div>
+              <div class="details">
+                <span class="name">Money</span>
+                <span class="data">$20.000</span>
+                <div class="progress position-relative blue">
+                  <span class="bg-blue" style="width: 80%">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="prog">
+              <div class="theme d-flex align-items-center justify-content-center orange">
+                <i class="fa-solid fa-code fa-lg c-orange"></i>
+              </div>
+              <div class="details">
+                <span class="name">Projects</span>
+                <span class="data">24</span>
+                <div class="progress position-relative orange">
+                  <span class="bg-orange" style="width: 55%">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="prog">
+              <div class="theme d-flex align-items-center justify-content-center green">
+                <i class="fa-solid fa-user fa-lg c-green"></i>
+              </div>
+              <div class="details">
+                <span class="name">Team</span>
+                <span class="data">12</span>
+                <div class="progress position-relative green">
+                  <span class="bg-green" style="width: 75%">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ! End Yearly Target Section -->
+        </div>
+      </div>
+      <!-- ! End Dashboard -->
+    </div>
+  </div>
+  <!-- ! End Content -->
   <!---------------------------------------------------------------------------->
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- * This Render Icon As SVG... -->

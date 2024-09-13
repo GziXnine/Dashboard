@@ -29,3 +29,32 @@ html {
     }
   }
 }
+
+// ! Start Header Page
+.header-page {
+  margin: 20px 20px 40px;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -1px;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+
+  &::before {
+    background-color: white;
+    width: 120px;
+  }
+
+  &::after {
+    background-color: black;
+    width: 40px;
+  }
+}
+
+// ! End Header Page
