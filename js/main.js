@@ -62,3 +62,28 @@ img.forEach((ele) => {
     popUp.appendChild(popUpImg);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const posts = document.querySelectorAll(".latest-post .data");
+  let currentIndex = 0;
+
+  // Function to show a specific post
+  function showPost(index) {
+    posts.forEach((post, i) => {
+      post.classList.remove("active"); // Hide all posts
+      post.style.display = "none"; // Ensure all posts are hidden
+    });
+    posts[index].classList.add("active"); // Show the current post
+    posts[index].style.display = "block"; // Display the current post
+  }
+
+  // Function to start the post display cycle
+  function startPostCycle() {
+    showPost(currentIndex);
+    currentIndex = (currentIndex + 1) % posts.length; // Move to the next post
+    setTimeout(startPostCycle, 8000); // Show next post every 4 seconds
+  }
+
+  // Start the cycle
+  startPostCycle();
+});

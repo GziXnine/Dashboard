@@ -62,6 +62,14 @@ html {
   width: 12px;
 }
 
+.responsive-table::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table::-webkit-scrollbar {
+  width: 6px;
+}
+
 ::-webkit-scrollbar-thumb {
   background: $blue-color;
 }

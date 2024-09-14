@@ -56,6 +56,48 @@
 .bg-green {
   background-color: $green-color !important;
 }
+.bg-red {
+  background-color: $red-color !important;
+}
+
+.bg-twitter {
+  background-color: #1da1f2;
+}
+.bg-facebook {
+  background-color: #1877f2;
+}
+.bg-youtube {
+  background-color: #ff0000;
+}
+.bg-linkedin {
+  background-color: #0a66c2;
+}
+
+.c-twitter {
+  color: #1da1f2;
+}
+.c-facebook {
+  color: #1877f2;
+}
+.c-youtube {
+  color: #ff0000;
+}
+.c-linkedin {
+  color: #0a66c2;
+}
+
+.b-blue {
+  border-color: $blue-color !important;
+}
+.b-orange {
+  border-color: $orange-color !important;
+}
+.b-green {
+  border-color: $green-color !important;
+}
+.b-red {
+  border-color: $red-color !important;
+}
 
 .c-blue {
   color: $blue-color !important;

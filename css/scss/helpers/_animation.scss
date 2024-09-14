@@ -67,3 +67,25 @@
     background-color: white;
   }
 }
+
+@keyframes pulse {
+  100% {
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes up-down {
+  0%,
+  100% {
+    bottom: 0px;
+  }
+
+  50% {
+    bottom: 30px;
+  }
+}
