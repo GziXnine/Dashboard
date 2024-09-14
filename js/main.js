@@ -21,7 +21,7 @@ let number = document.querySelectorAll(".row .box span");
 let start = false;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= stats.offsetTop) {
+  if (window.scrollY >= stats.offsetTop - 150) {
     if (!start) {
       number.forEach((num) => startCount(num));
     }
@@ -38,3 +38,27 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
+
+// ! Make a PopUp To A Lastest News Photos.
+let img = document.querySelectorAll(".news .data .item img");
+img.forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+    let div = document.createElement("div");
+    div.className = "popup-overlay";
+
+    let popUp = document.createElement("div");
+    popUp.className = "popUp";
+
+    let popUpImg = document.createElement("img");
+    popUpImg.src = ele.src;
+
+    div.addEventListener("click", function () {
+      popUp.remove();
+      div.remove();
+    });
+
+    document.body.appendChild(popUp);
+    document.body.appendChild(div);
+    popUp.appendChild(popUpImg);
+  });
+});

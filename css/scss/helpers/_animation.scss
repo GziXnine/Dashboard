@@ -1,5 +1,9 @@
 /** @format */
 
+// ! Import Variables
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
 @keyframes left-right {
   0% {
     transform: translateX(0px) rotate(180deg);
@@ -52,5 +56,14 @@
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     -o-transform: rotate(0);
+  }
+}
+
+@keyframes splash {
+  0% {
+    background-color: $blue-color;
+  }
+  100% {
+    background-color: white;
   }
 }
