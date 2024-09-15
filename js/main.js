@@ -63,27 +63,52 @@ img.forEach((ele) => {
   });
 });
 
+// ! Function To Make Posts Change Every 8 Seconds
 document.addEventListener("DOMContentLoaded", function () {
   const posts = document.querySelectorAll(".latest-post .data");
   let currentIndex = 0;
 
-  // Function to show a specific post
   function showPost(index) {
     posts.forEach((post, i) => {
-      post.classList.remove("active"); // Hide all posts
-      post.style.display = "none"; // Ensure all posts are hidden
+      post.classList.remove("active");
+      post.style.display = "none";
     });
-    posts[index].classList.add("active"); // Show the current post
-    posts[index].style.display = "block"; // Display the current post
+    posts[index].classList.add("active");
+    posts[index].style.display = "block";
   }
 
-  // Function to start the post display cycle
   function startPostCycle() {
     showPost(currentIndex);
-    currentIndex = (currentIndex + 1) % posts.length; // Move to the next post
-    setTimeout(startPostCycle, 8000); // Show next post every 4 seconds
+    currentIndex = (currentIndex + 1) % posts.length;
+    setTimeout(startPostCycle, 8000);
   }
 
-  // Start the cycle
+  // * Start the cycle
   startPostCycle();
+});
+
+// ! I Spent Two Hours In This Block Of Code And Doesn't Work ^_^
+document.addEventListener("DOMContentLoaded", () => {
+  let deleteBtns = document.querySelectorAll(".contain-delete");
+
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let item = e.target.closest(".item");
+      if (item) {
+        item.classList.toggle("done");
+      }
+    });
+  });
+});
+
+// ! I Spent Two Hours In This Block Of Code And Doesn't Work ^_^
+document.addEventListener("DOMContentLoaded", () => {
+  let bell = document.querySelector(".notifications");
+  let notifContainer = document.getElementById("notif-container");
+
+  bell.addEventListener("click", () => {
+    // Toggle visibility of notification container
+    notifContainer.style.display =
+      notifContainer.style.display === "block" ? "none" : "block";
+  });
 });

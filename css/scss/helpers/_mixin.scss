@@ -1,1 +1,37 @@
 /** @format */
+
+@mixin shape($type, $direction, $color: white, $position: 50%, $size: 12px) {
+  content: "";
+  position: absolute;
+  border: $size solid transparent;
+
+  @if $direction == "top" or $direction == "bottom" {
+    left: $position;
+    transform: translateX(-50%);
+    #{$direction}: -($size * 2);
+
+    @if $direction == "top" {
+      border-bottom-color: $color;
+    } @else {
+      border-top-color: $color;
+    }
+  } @else {
+    top: $position;
+    transform: translateY(-50%);
+    #{$direction}: -($size * 2);
+
+    @if $direction == "right" {
+      border-left-color: $color;
+    } @else {
+      border-right-color: $color;
+    }
+  }
+
+  @if $type == "bullet" {
+    border-width: calc($size / 1.2);
+  }
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 2px 10px $color;
+}

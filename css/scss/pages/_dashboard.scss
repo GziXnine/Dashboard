@@ -7,20 +7,33 @@
 // ! Import Functions
 @use "../helpers/animation" as *;
 
+// ! Import Mixins
+@use "../helpers/mixin" as *;
+
 .dashboard {
   background-color: #f1f2f6;
+
+  .dashboard-page {
+    background-color: #f1f2f6;
+    padding: 20px;
+    padding-bottom: 0;
+
+    @media (max-width: 767px) {
+      padding: 10px;
+      padding-bottom: 0;
+    }
+  }
 
   .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    margin: 20px;
     gap: 20px;
 
     @media (max-width: 767px) {
       grid-template-columns: minmax(200px, 1fr);
-      margin: 10px;
       gap: 10px;
     }
+
     // ! Start Welcome Section
     .welcome {
       background-color: white;
@@ -195,6 +208,17 @@
             margin-top: 5px;
             margin-bottom: 10px;
             display: block;
+
+            .percent {
+              font-size: 12px;
+              padding: 2px 4px;
+              color: white;
+              border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              -ms-border-radius: 5px;
+              -o-border-radius: 5px;
+            }
           }
 
           .name {
@@ -414,22 +438,28 @@
 
             h3,
             p {
-              text-decoration: line-through;
+              text-decoration: wavy line-through;
+              text-decoration-color: red;
+              -moz-text-decoration-color: red;
             }
           }
+          .contain-delete {
+            padding: 5px;
 
-          .delete {
-            cursor: pointer;
-            transition: $transition_time3;
-            -webkit-transition: $transition_time3;
-            -moz-transition: $transition_time3;
-            -ms-transition: $transition_time3;
-            -o-transition: $transition_time3;
+            .delete {
+              cursor: pointer;
+              transition: $transition_time3;
+              -webkit-transition: $transition_time3;
+              -moz-transition: $transition_time3;
+              -ms-transition: $transition_time3;
+              -o-transition: $transition_time3;
+              font-size: 18px;
 
-            &:hover {
-              color: $red-color;
-              animation: rotate $transition_time3 infinite;
-              -webkit-animation: rotate $transition_time3 infinite;
+              &:hover {
+                color: $red-color;
+                animation: rotate $transition_time3 infinite;
+                -webkit-animation: rotate $transition_time3 infinite;
+              }
             }
           }
 
@@ -678,6 +708,10 @@
               -o-transition: $transition_time3;
 
               &.compelete {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 svg {
                   color: $blue-color;
                   font-weight: 900;
@@ -849,6 +883,7 @@
         text-transform: capitalize;
         line-height: 1.8;
         min-height: 150px;
+        user-select: text;
 
         @media (max-width: 767px) {
           text-align: center;
@@ -954,18 +989,16 @@
   // ! Start Projects Table Section
   .table {
     padding: 20px;
-    margin: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
     background-color: white;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    min-width: 100%;
 
     @media (max-width: 767px) {
-      margin: 10px;
+      margin-top: 10px;
     }
 
     .responsive-table {

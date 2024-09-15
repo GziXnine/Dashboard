@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <!-- ! File Of Animations -->
   <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <!-- ! Render All Elements Normally -->
   <link rel="stylesheet" href="css/normalize.min.css">
   <!-- ! Font Awesome Library -->
@@ -23,95 +24,170 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+  <script>
+    window.onload = function () {
+      AOS.init();
+    };
+  </script>
 </head>
 
-<body>
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="300">
   <div class="dashboard d-flex">
     <!-- ! Start Sidebar -->
-    <div class="sidebar bg-white position-relative">
-      <h3 class="position-relative text-center fw-bold text-black">Allam</h3>
-      <div class="links">
-        <ul>
-          <li>
-            <a class="active d-flex align-items-center" href="index.html">
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="settings.html">
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span>Settings</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="profile.html">
-              <i class="fa-regular fa-user fa-fw"></i>
-              <span>Profile</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="projects.html">
-              <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span>Projects</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="statistics.html">
-              <i class="fa-solid fa-chart-simple fa-fw"></i>
-              <span>Statistics</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="courses.html">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Courses</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="friends.html">
-              <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span>Friends</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="files.html">
-              <i class="fa-regular fa-file fa-fw"></i>
-              <span>Files</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="plans.html">
-              <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span>Plans</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- 
+    <div class="sidebar bg-white position-relative" data-aos="fade-right" data-aos-delay="150">
+      <div class="holder position-fixed">
+        <h3 class="position-relative text-center fw-bold">Allam</h3>
+        <div class="links">
+          <ul>
+            <li>
+              <a class="active d-flex align-items-center" href="index.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="settings.html">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="statistics.html">
+                <i class="fa-solid fa-chart-simple fa-fw"></i>
+                <span>Statistics</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Courses</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <span>Friends</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <span>Files</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <span>Plans</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 
         <div class="toggle-theme">
           <i class="fas fa-sun"></i>
           <i class="fas fa-moon"></i>
         </div> 
       -->
-      <div class="log-out">
-        <span>
-          <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
-          <a href="">Log out</a>
-        </span>
+        <div class="log-out">
+          <span>
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
+            <a href="">Log out</a>
+          </span>
+        </div>
       </div>
     </div>
     <!-- ! End Sidebar -->
     <!-- ! Start Content -->
     <div class="content">
       <!-- ! Start Header -->
-      <div class="header bg-white d-flex justify-content-between align-items-center">
+      <div class="header bg-white d-flex justify-content-between align-items-center" data-aos="fade-down"
+        data-aos-delay="150">
         <div class="search position-relative">
           <input type="text" id="keywordInput" placeholder="Type A Keyword" name="keyword">
           <i class="fa-solid fa-search"></i>
         </div>
         <div class="notifications d-flex align-items-center">
           <i class="fa-regular fa-bell fa-lg"></i>
+        </div>
+        <div id="notif-container" class="notif-container">
+          <ul id="notif-list" class="show">
+            <h4>Notifications</h4>
+            <li>
+              <a href="https://gzixnine.github.io/Template_Three/#events" target="_blank">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>It's Ahmed Allam's birthday!</span>
+                  <span>12 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="images/team-01.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>19 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Ahlam reacted to your post.</span>
+                  <span>23 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-04.png" alt="Avatar">
+                <div>
+                  <span>Asmaa reacted to your comment.</span>
+                  <span>7 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>10 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-02.png" alt="Avatar">
+                <div>
+                  <span>Ashraf invited you to a group.</span>
+                  <span>8 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Abbas replied to your comment.</span>
+                  <span>2 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="profile">
           <a href="profile.html">
@@ -123,10 +199,10 @@
       <!-- ! End Header -->
       <!-- ! Start Dashboard -->
       <h1 class="position-relative header-page">Dashboard</h1>
-      <div class="dashboard">
+      <div class="dashboard-page">
         <div class="wrapper">
           <!-- ! Start Welcome Section -->
-          <div class="welcome">
+          <div class="welcome mega" data-aos="fade-right" data-aos-delay="250">
             <div class="banner d-flex justify-content-between">
               <div>
                 <h2 class="section-header">Welcome</h2>
@@ -146,7 +222,7 @@
           </div>
           <!-- ! End Welcome Section -->
           <!-- ! Start Quick Draft Section -->
-          <div class="quick-draft">
+          <div class="quick-draft mega" data-aos="fade-up" data-aos-delay="300">
             <div>
               <h2 class="section-header">Quick Draft</h2>
               <span class="section-des">Write A Draft For Your Ideas</span>
@@ -160,7 +236,7 @@
           </div>
           <!-- ! End Quick Draft Section -->
           <!-- ! Start Yearly Target Section -->
-          <div class="yearly-target">
+          <div class="yearly-target mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Yearly Targets</h2>
               <span class="section-des">Targets Of The Year</span>
@@ -171,7 +247,8 @@
               </div>
               <div class="details">
                 <span class="name">Money</span>
-                <span class="data">$20.000</span>
+                <span class="data d-flex justify-content-between align-items-center">$20.000 <span
+                    class="percent bg-blue">80%</span></span>
                 <div class="progress position-relative blue">
                   <span class="bg-blue" data-prog="80%">
                   </span>
@@ -184,7 +261,8 @@
               </div>
               <div class="details">
                 <span class="name">Projects</span>
-                <span class="data">24</span>
+                <span class="data d-flex justify-content-between align-items-center">24<span
+                    class="percent bg-orange">55%</span></span>
                 <div class="progress position-relative orange">
                   <span class="bg-orange" data-prog="55%">
                   </span>
@@ -197,7 +275,8 @@
               </div>
               <div class="details">
                 <span class="name">Team</span>
-                <span class="data">12</span>
+                <span class="data d-flex justify-content-between align-items-center">12<span
+                    class="percent bg-green">75%</span></span>
                 <div class="progress position-relative green">
                   <span class="bg-green" data-prog="75%">
                   </span>
@@ -207,7 +286,7 @@
           </div>
           <!-- ! End Yearly Target Section -->
           <!-- ! Start Tickets Statistics Section -->
-          <div class="statistics" id="statistics">
+          <div class="statistics mega" id="statistics" data-aos="fade-right" data-aos-delay="250">
             <div>
               <h2 class="section-header">Tickets Statistics</h2>
               <span class="section-des">Everything About Support Tickets</span>
@@ -237,7 +316,7 @@
           </div>
           <!-- ! End Tickets Statistics Section -->
           <!-- ! Start Lastest News Section -->
-          <div class="news">
+          <div class="news mega" data-aos="fade-down" data-aos-delay="250">
             <div>
               <h2 class="section-header">Lastest News</h2>
             </div>
@@ -280,7 +359,7 @@
           </div>
           <!-- ! End Lastest News Section -->
           <!-- ! Start Latest Tasks Section -->
-          <div class="tasks">
+          <div class="tasks mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Latest Tasks</h2>
             </div>
@@ -290,41 +369,51 @@
                   <h3>Record One New Video</h3>
                   <p>Record Python Create Exe Project</p>
                 </div>
-                <i class="fa-regular fa-trash-can delete"></i>
+                <div class="contain-delete">
+                  <i class="fa-regular fa-trash-can delete"></i>
+                </div>
               </div>
               <div class="d-flex align-items-center item">
                 <div class="info">
                   <h3>Write Article</h3>
                   <p>Write Low Level vs High Level Languages</p>
                 </div>
-                <i class="fa-regular fa-trash-can delete"></i>
+                <div class="contain-delete">
+                  <i class="fa-regular fa-trash-can delete"></i>
+                </div>
               </div>
               <div class="d-flex align-items-center item">
                 <div class="info">
                   <h3>Finish Project</h3>
                   <p>Publish Academy Programming Project</p>
                 </div>
-                <i class="fa-regular fa-trash-can delete"></i>
+                <div class="contain-delete">
+                  <i class="fa-regular fa-trash-can delete"></i>
+                </div>
               </div>
               <div class="d-flex align-items-center item done">
                 <div class="info">
                   <h3>Attend The Meeting</h3>
                   <p>Attend The Project Business Analysis Meeting</p>
                 </div>
-                <i class="fa-regular fa-trash-can delete"></i>
+                <div class="contain-delete">
+                  <i class="fa-regular fa-trash-can delete"></i>
+                </div>
               </div>
               <div class="d-flex align-items-center item">
                 <div class="info">
                   <h3>Finish Lesson</h3>
                   <p>Finish Teaching Flex Box</p>
                 </div>
-                <i class="fa-regular fa-trash-can delete"></i>
+                <div class="contain-delete">
+                  <i class="fa-regular fa-trash-can delete"></i>
+                </div>
               </div>
             </div>
           </div>
           <!-- ! End Latest Tasks Section -->
           <!-- ! Start Top Search Section -->
-          <div class="search">
+          <div class="search mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Top Search Items</h2>
             </div>
@@ -375,7 +464,7 @@
           </div>
           <!-- ! End Top Search Section -->
           <!-- ! Start Latest Uploads Section -->
-          <div class="latest">
+          <div class="latest mega" data-aos="fade-down" data-aos-delay="300">
             <div>
               <h2 class="section-header">Latest Uploads</h2>
             </div>
@@ -432,7 +521,7 @@
           </div>
           <!-- ! End Latest Uploads Section -->
           <!-- ! Start Last Project Progress Section -->
-          <div class="projects">
+          <div class="projects mega" data-aos="fade-right" data-aos-delay="250">
             <div>
               <h2 class="section-header">Last Project Progress</h2>
             </div>
@@ -470,7 +559,7 @@
           </div>
           <!-- ! End Last Project Progress Section -->
           <!-- ! Start Reminders Section -->
-          <div class="reminders">
+          <div class="reminders mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Reminders</h2>
             </div>
@@ -507,7 +596,7 @@
           </div>
           <!-- ! End Reminders Section -->
           <!-- ! Start Latest Post Widget Section -->
-          <div class="latest-post">
+          <div class="latest-post mega" data-aos="fade-up" data-aos-delay="300">
             <div>
               <h2 class="section-header">Latest Post</h2>
             </div>
@@ -625,7 +714,7 @@
           </div>
           <!-- ! End Latest Post Widget Section -->
           <!-- ! Start Social Media Stats Widget Section -->
-          <div class="social-media">
+          <div class="social-media mega" data-aos="fade-right" data-aos-delay="250">
             <div>
               <h2 class="section-header">Social Media Stats</h2>
             </div>
@@ -655,7 +744,7 @@
           <!-- ! Start End Media Stats Widget -->
         </div>
         <!-- ! Start Projects Table Section -->
-        <div class="table">
+        <div class="table mega" data-aos="fade-down" data-aos-delay="500">
           <div>
             <h2 class="section-header">Projects</h2>
           </div>
@@ -762,6 +851,7 @@
   <!-- ! JavaScript File -->
   <script src="js/main.js"></script>
   <script src="js/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
