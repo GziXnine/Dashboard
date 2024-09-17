@@ -36,7 +36,7 @@ function startCount(el) {
     if (el.textContent == goal) {
       clearInterval(count);
     }
-  }, 2000 / goal);
+  }, 3000 / goal);
 }
 
 // ! Make a PopUp To A Lastest News Photos.
@@ -103,12 +103,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ! I Spent Two Hours In This Block Of Code And Doesn't Work ^_^
 document.addEventListener("DOMContentLoaded", () => {
+  // Get the notification bell and container elements
   let bell = document.querySelector(".notifications");
   let notifContainer = document.getElementById("notif-container");
 
+  // Toggle the visibility of the notification container when the bell is clicked
   bell.addEventListener("click", () => {
-    // Toggle visibility of notification container
+    // Toggle visibility
     notifContainer.style.display =
       notifContainer.style.display === "block" ? "none" : "block";
   });
+
+  // Get all list items inside the notification container
+  let notifItems = notifContainer.querySelectorAll("li");
+
+  // Add click event listener to each notification item
+  notifItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Add the "show" class to the clicked item
+      item.classList.add("show");
+    });
+  });
 });
+
+// ! Function to toggle theme and update localStorage
+function toggleTheme() {
+  // * Toggle dark mode classes for sidebar, header, notif-container, and dashboard
+  document.querySelector(".sidebar").classList.toggle("dark");
+  document.querySelector(".header").classList.toggle("dark");
+  document.querySelector(".notif-container").classList.toggle("dark");
+  document.querySelector(".dashboard").classList.toggle("dark");
+
+  // * Toggle the icon between moon and sun
+  const icon = document.querySelector(".toggle-icon");
+  if (icon.classList.contains("fa-moon")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+    localStorage.setItem("theme", "dark"); // * Save the theme as "dark"
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+    localStorage.setItem("theme", "light"); // * Save the theme as "light"
+  }
+}
+
+// ! Event listener for the dark mode button
+document
+  .getElementById("darkmode-button")
+  .addEventListener("click", toggleTheme);
+
+// * Function to load the saved theme on page load
+function loadTheme() {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    // * Apply dark theme classes
+    document.querySelector(".sidebar").classList.add("dark");
+    document.querySelector(".header").classList.add("dark");
+    document.querySelector(".notif-container").classList.add("dark");
+    document.querySelector(".dashboard").classList.add("dark");
+
+    // * Set the icon to sun
+    const icon = document.querySelector(".toggle-icon");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    // * Default is light theme, so ensure no dark classes
+    document.querySelector(".sidebar").classList.remove("dark");
+    document.querySelector(".header").classList.remove("dark");
+    document.querySelector(".notif-container").classList.remove("dark");
+    document.querySelector(".dashboard").classList.remove("dark");
+
+    // * Set the icon to moon
+    const icon = document.querySelector(".toggle-icon");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+}
+
+// * Load the theme when the page loads
+window.addEventListener("load", loadTheme);

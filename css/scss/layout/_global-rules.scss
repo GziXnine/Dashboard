@@ -70,6 +70,13 @@ html {
   background: $blue-color;
 }
 
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-track.dark {
+  background: black;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: $blue-alt-color;
 }
@@ -129,16 +136,59 @@ html {
 
 .mega {
   &:hover {
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
     box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
-    transition: $transition_time3;
-    -webkit-transition: $transition_time3;
-    -moz-transition: $transition_time3;
-    -ms-transition: $transition_time3;
-    -o-transition: $transition_time3;
   }
+}
+
+.toggle-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+
+.toggle-switch {
+  background-color: #ccc;
+  width: 68px;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  transition: $transition_time3;
+  -webkit-transition: $transition_time3;
+  -moz-transition: $transition_time3;
+  -ms-transition: $transition_time3;
+  -o-transition: $transition_time3;
+}
+
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: $blue-color;
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 45px;
+  color: $blue-color;
 }

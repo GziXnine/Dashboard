@@ -10,8 +10,9 @@
   <!-- ! Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Main Template CSS File -->
-  <link rel="stylesheet" href="css/framework.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/framework.min.css">
+  <link rel="stylesheet" href="css/darkMode.min.css">
   <!-- ! File Of Animations -->
   <link rel="stylesheet" href="css/aos.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
@@ -31,10 +32,10 @@
   </script>
 </head>
 
-<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="300">
+<body>
   <div class="dashboard d-flex">
     <!-- ! Start Sidebar -->
-    <div class="sidebar bg-white position-relative" data-aos="fade-right" data-aos-delay="150">
+    <div class="sidebar bg-white position-relative">
       <div class="holder position-fixed">
         <h3 class="position-relative text-center fw-bold">Allam</h3>
         <div class="links">
@@ -95,12 +96,6 @@
             </li>
           </ul>
         </div>
-        <!-- 
-        <div class="toggle-theme">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </div> 
-      -->
         <div class="log-out">
           <span>
             <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
@@ -113,12 +108,14 @@
     <!-- ! Start Content -->
     <div class="content">
       <!-- ! Start Header -->
-      <div class="header bg-white d-flex justify-content-between align-items-center" data-aos="fade-down"
-        data-aos-delay="150">
+      <div class="header bg-white d-flex justify-content-between align-items-center">
         <div class="search position-relative">
           <input type="text" id="keywordInput" placeholder="Type A Keyword" name="keyword">
           <i class="fa-solid fa-search"></i>
         </div>
+        <button id="darkmode-button" class="btn rounded-circle">
+          <i class="fa-solid fa-moon toggle-icon"></i>
+        </button>
         <div class="notifications d-flex align-items-center">
           <i class="fa-regular fa-bell fa-lg"></i>
         </div>
@@ -222,7 +219,7 @@
           </div>
           <!-- ! End Welcome Section -->
           <!-- ! Start Quick Draft Section -->
-          <div class="quick-draft mega" data-aos="fade-up" data-aos-delay="300">
+          <div class="quick-draft mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Quick Draft</h2>
               <span class="section-des">Write A Draft For Your Ideas</span>
@@ -316,7 +313,7 @@
           </div>
           <!-- ! End Tickets Statistics Section -->
           <!-- ! Start Lastest News Section -->
-          <div class="news mega" data-aos="fade-down" data-aos-delay="250">
+          <div class="news mega" data-aos="fade-right" data-aos-delay="250">
             <div>
               <h2 class="section-header">Lastest News</h2>
             </div>
@@ -464,7 +461,7 @@
           </div>
           <!-- ! End Top Search Section -->
           <!-- ! Start Latest Uploads Section -->
-          <div class="latest mega" data-aos="fade-down" data-aos-delay="300">
+          <div class="latest mega" data-aos="fade-right" data-aos-delay="250">
             <div>
               <h2 class="section-header">Latest Uploads</h2>
             </div>
@@ -596,10 +593,12 @@
           </div>
           <!-- ! End Reminders Section -->
           <!-- ! Start Latest Post Widget Section -->
-          <div class="latest-post mega" data-aos="fade-up" data-aos-delay="300">
+          <div class="latest-post mega" data-aos="fade-left" data-aos-delay="250">
             <div>
               <h2 class="section-header">Latest Post</h2>
             </div>
+
+            <!-- Post 1 -->
             <div class="data active">
               <div class="top d-flex align-items-center">
                 <img class="avatar" src="images/team-01.png" alt="" />
@@ -612,39 +611,30 @@
                 Hard work beats talent when talent doesn't work hard.
               </div>
               <div class="post-stats d-flex align-items-center justify-content-between">
-                <div>
-                  <i class="fa-solid fa-heart"></i>
-                  <span>1.1K</span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-comments"></i>
-                  <span>340</span>
-                </div>
+                <div><i class="fa-solid fa-heart"></i> <span>1.1K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>340</span></div>
               </div>
             </div>
+
+            <!-- Post 2 -->
             <div class="data">
               <div class="top d-flex align-items-center">
-                <img class="avatar" src="images/team-03.png" alt="" />
+                <img class="avatar" src="images/team-02.png" alt="" />
                 <div class="info">
                   <span class="d-block name">Osama Elzero</span>
                   <span class="time">About 12 Hours Ago</span>
                 </div>
               </div>
               <div class="post-content d-flex align-items-center justify-content-center">
-                You can fool all of the people some of the time, and some of the people all of the time, but you can't
-                fool all of the people all of the time.
+                You can fool some people all the time, but not everyone.
               </div>
               <div class="post-stats d-flex align-items-center justify-content-between">
-                <div>
-                  <i class="fa-solid fa-heart"></i>
-                  <span>1.8K</span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-comments"></i>
-                  <span>500</span>
-                </div>
+                <div><i class="fa-solid fa-heart"></i> <span>1.8K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>500</span></div>
               </div>
             </div>
+
+            <!-- Post 3 -->
             <div class="data">
               <div class="top d-flex align-items-center">
                 <img class="avatar" src="images/team-03.png" alt="" />
@@ -654,19 +644,15 @@
                 </div>
               </div>
               <div class="post-content d-flex align-items-center justify-content-center">
-                Your time is limited, so don’t waste it living someone else’s life.
+                Your time is limited, don't waste it living someone else's life.
               </div>
               <div class="post-stats d-flex align-items-center justify-content-between">
-                <div>
-                  <i class="fa-solid fa-heart"></i>
-                  <span>600</span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-comments"></i>
-                  <span>200</span>
-                </div>
+                <div><i class="fa-solid fa-heart"></i> <span>600</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>200</span></div>
               </div>
             </div>
+
+            <!-- Post 4 -->
             <div class="data">
               <div class="top d-flex align-items-center">
                 <img class="avatar" src="images/team-04.png" alt="" />
@@ -679,16 +665,12 @@
                 In the middle of every difficulty lies opportunity.
               </div>
               <div class="post-stats d-flex align-items-center justify-content-between">
-                <div>
-                  <i class="fa-solid fa-heart"></i>
-                  <span>2K</span>
-                </div>
-                <div>
-                  <i class="fa-solid fa-comments"></i>
-                  <span>1.2K</span>
-                </div>
+                <div><i class="fa-solid fa-heart"></i> <span>2K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>1.2K</span></div>
               </div>
             </div>
+
+            <!-- Post 5 -->
             <div class="data">
               <div class="top d-flex align-items-center">
                 <img class="avatar" src="images/team-05.png" alt="" />
@@ -698,20 +680,105 @@
                 </div>
               </div>
               <div class="post-content d-flex align-items-center justify-content-center">
-                Success is not final, failure is not fatal: It is the courage to continue that counts.
+                Success is not final, failure is not fatal: It’s the courage to continue that counts.
               </div>
               <div class="post-stats d-flex align-items-center justify-content-between">
-                <div>
-                  <i class="fa-solid fa-heart"></i>
-                  <span>1.2K</span>
+                <div><i class="fa-solid fa-heart"></i> <span>1.2K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>400</span></div>
+              </div>
+            </div>
+
+            <!-- Post 6 -->
+            <div class="data">
+              <div class="top d-flex align-items-center">
+                <img class="avatar" src="images/team-03.png" alt="" />
+                <div class="info">
+                  <span class="d-block name">Sara Ibrahim</span>
+                  <span class="time">About 5 Days Ago</span>
                 </div>
-                <div>
-                  <i class="fa-solid fa-comments"></i>
-                  <span>400</span>
+              </div>
+              <div class="post-content d-flex align-items-center justify-content-center">
+                The only way to do great work is to love what you do.
+              </div>
+              <div class="post-stats d-flex align-items-center justify-content-between">
+                <div><i class="fa-solid fa-heart"></i> <span>900</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>350</span></div>
+              </div>
+            </div>
+
+            <!-- Post 7 -->
+            <div class="data">
+              <div class="top d-flex align-items-center">
+                <img class="avatar" src="images/team-01.png" alt="" />
+                <div class="info">
+                  <span class="d-block name">Yasser Ali</span>
+                  <span class="time">About 7 Hours Ago</span>
                 </div>
+              </div>
+              <div class="post-content d-flex align-items-center justify-content-center">
+                Don't watch the clock; do what it does. Keep going.
+              </div>
+              <div class="post-stats d-flex align-items-center justify-content-between">
+                <div><i class="fa-solid fa-heart"></i> <span>1.5K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>670</span></div>
+              </div>
+            </div>
+
+            <!-- Post 8 -->
+            <div class="data">
+              <div class="top d-flex align-items-center">
+                <img class="avatar" src="images/team-05.png" alt="" />
+                <div class="info">
+                  <span class="d-block name">Nour El-Deen</span>
+                  <span class="time">About 4 Days Ago</span>
+                </div>
+              </div>
+              <div class="post-content d-flex align-items-center justify-content-center">
+                Dream big, work hard, stay focused, and surround yourself with good people.
+              </div>
+              <div class="post-stats d-flex align-items-center justify-content-between">
+                <div><i class="fa-solid fa-heart"></i> <span>2.2K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>1.1K</span></div>
+              </div>
+            </div>
+
+            <!-- Post 9 -->
+            <div class="data">
+              <div class="top d-flex align-items-center">
+                <img class="avatar" src="images/team-04.png" alt="" />
+                <div class="info">
+                  <span class="d-block name">Ali Kamal</span>
+                  <span class="time">About 6 Hours Ago</span>
+                </div>
+              </div>
+              <div class="post-content d-flex align-items-center justify-content-center">
+                Life is 10% what happens to you and 90% how you react to it.
+              </div>
+              <div class="post-stats d-flex align-items-center justify-content-between">
+                <div><i class="fa-solid fa-heart"></i> <span>3K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>900</span></div>
+              </div>
+            </div>
+
+            <!-- Post 10 -->
+            <div class="data">
+              <div class="top d-flex align-items-center">
+                <img class="avatar" src="images/team-02.png" alt="" />
+                <div class="info">
+                  <span class="d-block name">Fatma Zahra</span>
+                  <span class="time">About 1 Day Ago</span>
+                </div>
+              </div>
+              <div class="post-content d-flex align-items-center justify-content-center">
+                Failure will never overtake me if my determination to succeed is strong enough.
+              </div>
+              <div class="post-stats d-flex align-items-center justify-content-between">
+                <div><i class="fa-solid fa-heart"></i> <span>1.4K</span></div>
+                <div><i class="fa-solid fa-comments"></i> <span>540</span></div>
               </div>
             </div>
           </div>
+
           <!-- ! End Latest Post Widget Section -->
           <!-- ! Start Social Media Stats Widget Section -->
           <div class="social-media mega" data-aos="fade-right" data-aos-delay="250">
@@ -744,7 +811,7 @@
           <!-- ! Start End Media Stats Widget -->
         </div>
         <!-- ! Start Projects Table Section -->
-        <div class="table mega" data-aos="fade-down" data-aos-delay="500">
+        <div class="table mega" data-aos="fade-down" data-aos-delay="300">
           <div>
             <h2 class="section-header">Projects</h2>
           </div>

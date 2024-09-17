@@ -351,6 +351,35 @@
       color: $blue-color;
     }
   }
+
+  [id="darkmode-button"] {
+    background-color: #e4e3e3;
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 50px;
+
+    &:hover {
+      svg {
+        color: $blue-alt-color !important;
+      }
+      svg.fa-sun {
+        color: #ffc107 !important;
+      }
+    }
+
+    svg {
+      color: black !important;
+    }
+
+    &:hover {
+      background-color: #d5d5d5 !important;
+    }
+  }
 }
 
 .notif-container {
@@ -371,6 +400,7 @@
   overflow: hidden;
   overflow-y: auto;
   height: 40vh;
+  width: 330px;
 
   &.show {
     display: block;
@@ -414,6 +444,10 @@
           display: block;
           color: $grey-color;
         }
+      }
+
+      &.show {
+        display: none;
       }
     }
   }
