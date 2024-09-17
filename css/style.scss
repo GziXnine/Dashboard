@@ -13,6 +13,7 @@
 // ! Import Sidebar
 @use "scss/pages/sidebar";
 @use "scss/pages/dashboard";
+@use "scss/pages/plans";
 
 // ! Import Functions
 @use "scss/helpers/animation" as *;
@@ -21,6 +22,7 @@
   width: 250px;
   box-shadow: 0 0 10px #ddd;
   padding: 20px;
+  min-height: 100vh;
 
   @media (max-width: 767px) {
     width: 58px;

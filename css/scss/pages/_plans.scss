@@ -1,0 +1,121 @@
+/** @format */
+
+// ! Import Variables
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
+// ! Import Functions
+@use "../helpers/animation" as *;
+
+// ! Import Mixins
+@use "../helpers/mixin" as *;
+
+.dashboard {
+  background-color: #f1f2f6;
+
+  .plans-page {
+    background-color: #f1f2f6;
+    padding: 20px;
+
+    @media (max-width: 767px) {
+      padding: 10px;
+      padding-bottom: 0;
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: minmax(200px, 1fr);
+      gap: 10px;
+    }
+
+    .plan {
+      padding: 20px;
+      background-color: white;
+
+      .top {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        border: 3px solid white;
+        outline: 3px solid white;
+
+        &.bg-green {
+          outline-color: $green-color;
+        }
+        &.bg-blue {
+          outline-color: $blue-color;
+        }
+        &.bg-orange {
+          outline-color: $orange-color;
+        }
+
+        h2 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        div {
+          font-size: 40px;
+          font-weight: 500;
+        }
+      }
+
+      ul {
+        padding: 12px 0;
+
+        li {
+          padding: 14px 0;
+          display: flex;
+
+          span {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #eee;
+          }
+          svg {
+            font-size: 18px;
+            color: $red-color;
+            margin-right: 5px;
+
+            &.yes {
+              color: $green-color;
+            }
+            &.help {
+              color: $grey-color;
+              margin-left: auto;
+              display: block;
+            }
+          }
+        }
+      }
+      a {
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        color: white;
+        font-size: 14px;
+        padding: 3px 10px;
+        font-weight: 500;
+        width: fit-content;
+      }
+
+      p {
+        color: $grey-color;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}

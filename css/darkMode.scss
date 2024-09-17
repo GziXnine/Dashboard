@@ -144,7 +144,8 @@
     color: white;
   }
 
-  .dashboard-page {
+  .dashboard-page,
+  .plans-page {
     background-color: #0f111a;
   }
 
@@ -428,6 +429,25 @@
       }
     }
     // ! End Social Media Stats Widget Section
+    // ! Start Page Plans
+    .plan {
+      background-color: #141824;
+
+      .top {
+        border: 3px solid #141824;
+      }
+
+      ul {
+        li {
+          color: white;
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid gray;
+          }
+        }
+      }
+    }
+    // ! End Page Plans
   }
 
   // ! Start Projects Table Section
