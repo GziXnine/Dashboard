@@ -145,7 +145,8 @@
   }
 
   .dashboard-page,
-  .plans-page {
+  .plans-page,
+  .projects-page {
     background-color: #0f111a;
   }
 
@@ -448,6 +449,39 @@
       }
     }
     // ! End Page Plans
+    // ! Start Page Projects
+    .project {
+      background-color: #141824;
+
+      & > span,
+      h4 {
+        color: white;
+      }
+
+      .team {
+        a {
+          img {
+            border-color: black;
+          }
+        }
+      }
+
+      .do {
+        border-color: black;
+
+        span {
+          background-color: #3e465b;
+          color: white;
+        }
+      }
+
+      .info {
+        svg {
+          color: $green-color;
+        }
+      }
+    }
+    // ! End Page Projects
   }
 
   // ! Start Projects Table Section

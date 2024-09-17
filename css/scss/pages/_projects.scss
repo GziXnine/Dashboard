@@ -1,0 +1,149 @@
+/** @format */
+
+// ! Import Variables
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
+// ! Import Functions
+@use "../helpers/animation" as *;
+
+// ! Import Mixins
+@use "../helpers/mixin" as *;
+
+.dashboard {
+  background-color: #f1f2f6;
+
+  .projects-page {
+    background-color: #f1f2f6;
+    padding: 20px;
+
+    @media (max-width: 767px) {
+      padding: 10px;
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: minmax(200px, 1fr);
+      gap: 10px;
+    }
+
+    .project {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+
+      & > span {
+        font-size: 13px;
+        color: $grey-color;
+        float: right;
+        display: block;
+        margin-top: -10px;
+        margin-right: -10px;
+      }
+
+      h4 {
+        font-size: 16px;
+        margin-top: 0px;
+      }
+
+      p {
+        font-size: 14px;
+        color: $grey-color;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 400;
+      }
+
+      .team {
+        margin-top: 40px;
+        margin-bottom: 18px;
+
+        a {
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+          }
+          &:hover {
+            position: relative;
+            z-index: 1000;
+          }
+
+          &:not(:first-of-type) {
+            margin-left: -20px;
+          }
+        }
+      }
+
+      .do {
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        justify-content: end;
+
+        span {
+          font-size: 13px;
+          border-radius: 6px;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          -o-border-radius: 6px;
+          background-color: #eee;
+          margin: 3px;
+          padding: 3px 8px;
+          font-weight: 500;
+          width: fit-content;
+        }
+      }
+
+      .info {
+        font-size: 14px;
+        color: $grey-color;
+        padding-top: 15px;
+        font-weight: 500;
+
+        svg {
+          color: $green-color;
+        }
+
+        .prog {
+          background-color: #eee;
+          height: 8px;
+          width: 260px;
+          border-radius: 4px;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -o-border-radius: 4px;
+          overflow: hidden;
+
+          span {
+            display: block;
+            height: 100%;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
