@@ -92,6 +92,34 @@
     }
   }
 
+  .notifications {
+    background-color: #3e465b;
+    svg {
+      color: white;
+    }
+  }
+
+  [id="darkmode-button"] {
+    background-color: #3e465b;
+
+    &:hover {
+      svg {
+        color: $blue-alt-color !important;
+      }
+      svg.fa-sun {
+        color: #ffc107 !important;
+      }
+    }
+
+    svg {
+      color: white !important;
+    }
+
+    &:hover {
+      background-color: #0f111a !important;
+    }
+  }
+
   .profile {
     span {
       color: white !important;
@@ -143,7 +171,8 @@
   .dashboard-page,
   .plans-page,
   .projects-page,
-  .files-page {
+  .files-page,
+  .friends-page {
     background-color: #0f111a;
   }
 
@@ -512,6 +541,10 @@
               &:last-child {
                 border-color: #3e465b;
               }
+
+              img {
+                border-color: black;
+              }
             }
           }
         }
@@ -558,4 +591,23 @@
     }
   }
   // ! End Files Page
+  // ! Start Friend Page
+  .friend {
+    background: #141824;
+
+    .tel {
+      color: white;
+      background-color: #3e465b;
+    }
+
+    h4 {
+      color: white;
+    }
+
+    .icons {
+      border-color: black;
+      color: white;
+    }
+  }
+  // ! End Friend Page
 }

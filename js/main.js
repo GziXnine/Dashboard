@@ -128,11 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ! Function to toggle theme and update localStorage
 function toggleTheme() {
-  // * Toggle dark mode classes for sidebar, header, notif-container, and dashboard
-  document.querySelector(".sidebar").classList.toggle("dark");
-  document.querySelector(".header").classList.toggle("dark");
-  document.querySelector(".notif-container").classList.toggle("dark");
-  document.querySelector(".dashboard").classList.toggle("dark");
+  // * Elements to toggle dark mode classes
+  const elements = [
+    ".sidebar",
+    ".header",
+    ".notif-container",
+    ".dashboard",
+    ".responsive-table",
+    "body",
+  ];
+
+  // * Toggle dark mode classes for each element in the array
+  elements.forEach((selector) => {
+    document.querySelector(selector)?.classList.toggle("dark");
+  });
 
   // * Toggle the icon between moon and sun
   const icon = document.querySelector(".toggle-icon");
@@ -155,24 +164,30 @@ document
 // * Function to load the saved theme on page load
 function loadTheme() {
   const savedTheme = localStorage.getItem("theme");
+  const elements = [
+    ".sidebar",
+    ".header",
+    ".notif-container",
+    ".dashboard",
+    ".responsive-table",
+    "body",
+  ];
 
   if (savedTheme === "dark") {
-    // * Apply dark theme classes
-    document.querySelector(".sidebar").classList.add("dark");
-    document.querySelector(".header").classList.add("dark");
-    document.querySelector(".notif-container").classList.add("dark");
-    document.querySelector(".dashboard").classList.add("dark");
+    // * Apply dark theme classes for each element in the array
+    elements.forEach((selector) => {
+      document.querySelector(selector)?.classList.add("dark");
+    });
 
     // * Set the icon to sun
     const icon = document.querySelector(".toggle-icon");
     icon.classList.remove("fa-moon");
     icon.classList.add("fa-sun");
   } else {
-    // * Default is light theme, so ensure no dark classes
-    document.querySelector(".sidebar").classList.remove("dark");
-    document.querySelector(".header").classList.remove("dark");
-    document.querySelector(".notif-container").classList.remove("dark");
-    document.querySelector(".dashboard").classList.remove("dark");
+    // * Ensure no dark classes for each element in the array
+    elements.forEach((selector) => {
+      document.querySelector(selector)?.classList.remove("dark");
+    });
 
     // * Set the icon to moon
     const icon = document.querySelector(".toggle-icon");
@@ -180,6 +195,9 @@ function loadTheme() {
     icon.classList.add("fa-moon");
   }
 }
+
+// * Load the saved theme on page load
+loadTheme();
 
 // * Load the theme when the page loads
 window.addEventListener("load", loadTheme);

@@ -74,7 +74,13 @@ html {
   background: white;
 }
 .responsive-table::-webkit-scrollbar-track {
-  background: black;
+  background: white;
+}
+.responsive-table.dark::-webkit-scrollbar-track {
+  background: #141824;
+}
+body.dark::-webkit-scrollbar-track {
+  background: #141824;
 }
 
 ::-webkit-scrollbar-thumb:hover {
