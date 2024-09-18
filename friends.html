@@ -7,98 +7,101 @@
   <title>Dashboard | Friends</title>
   <!-- ! Page Title Icon -->
   <link rel="icon" href="images/chart-line-solid.svg">
+  <!-- ! Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Main Template CSS File -->
-  <link rel="stylesheet" href="css/framework.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/framework.min.css">
+  <link rel="stylesheet" href="css/darkMode.min.css">
   <!-- ! File Of Animations -->
   <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <!-- ! Render All Elements Normally -->
   <link rel="stylesheet" href="css/normalize.min.css">
   <!-- ! Font Awesome Library -->
   <link rel="stylesheet" href="css/all.min.css">
-  <!-- ! Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+  <script>
+    window.onload = function () {
+      AOS.init();
+    };
+  </script>
 </head>
 
 <body>
   <div class="dashboard d-flex">
     <!-- ! Start Sidebar -->
     <div class="sidebar bg-white position-relative">
-      <h3 class="position-relative text-center fw-bold text-black">Allam</h3>
-      <div class="links">
-        <ul>
-          <li>
-            <a class="active d-flex align-items-center" href="index.html">
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="settings.html">
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span>Settings</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="profile.html">
-              <i class="fa-regular fa-user fa-fw"></i>
-              <span>Profile</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="projects.html">
-              <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span>Projects</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="statistics.html">
-              <i class="fa-solid fa-chart-simple fa-fw"></i>
-              <span>Statistics</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="courses.html">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Courses</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="friends.html">
-              <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span>Friends</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="files.html">
-              <i class="fa-regular fa-file fa-fw"></i>
-              <span>Files</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="plans.html">
-              <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span>Plans</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- 
-        <div class="toggle-theme">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </div> 
-      -->
-      <div class="log-out">
-        <span>
-          <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
-          <a href="">Log out</a>
-        </span>
+      <div class="holder position-fixed">
+        <h3 class="position-relative text-center fw-bold">Allam</h3>
+        <div class="links">
+          <ul>
+            <li>
+              <a class="d-flex align-items-center" href="index.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="settings.html">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="statistics.html">
+                <i class="fa-solid fa-chart-simple fa-fw"></i>
+                <span>Statistics</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Courses</span>
+              </a>
+            </li>
+            <li>
+              <a class="active d-flex align-items-center" href="friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <span>Friends</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <span>Files</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <span>Plans</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="log-out">
+          <span>
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
+            <a href="">Log out</a>
+          </span>
+        </div>
       </div>
     </div>
     <!-- ! End Sidebar -->
@@ -110,8 +113,78 @@
           <input type="text" id="keywordInput" placeholder="Type A Keyword" name="keyword">
           <i class="fa-solid fa-search"></i>
         </div>
+        <button id="darkmode-button" class="btn rounded-circle">
+          <i class="fa-solid fa-moon toggle-icon"></i>
+        </button>
         <div class="notifications d-flex align-items-center">
           <i class="fa-regular fa-bell fa-lg"></i>
+        </div>
+        <div id="notif-container" class="notif-container">
+          <ul id="notif-list" class="show">
+            <h4>Notifications</h4>
+            <li>
+              <a href="https://gzixnine.github.io/Template_Three/#events" target="_blank">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>It's Ahmed Allam's birthday!</span>
+                  <span>12 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/GziXnine" target="_blank"><img src="images/team-01.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>19 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Ahlam reacted to your post.</span>
+                  <span>23 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-04.png" alt="Avatar">
+                <div>
+                  <span>Asmaa reacted to your comment.</span>
+                  <span>7 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>10 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-02.png" alt="Avatar">
+                <div>
+                  <span>Ashraf invited you to a group.</span>
+                  <span>8 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Abbas replied to your comment.</span>
+                  <span>2 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="profile">
           <a href="profile.html">
@@ -123,10 +196,11 @@
       <!-- ! End Header -->
       <!-- ! Start Friends -->
       <h1 class="position-relative header-page">Friends</h1>
-      <div class="Friends">
+      <div class="Friends-page">
+
       </div>
-      <!-- ! End Friends -->
     </div>
+    <!-- ! End Friends -->
   </div>
   <!-- ! End Content -->
   <!---------------------------------------------------------------------------->
@@ -136,6 +210,7 @@
   <!-- ! JavaScript File -->
   <script src="js/main.js"></script>
   <script src="js/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

@@ -1,21 +1,14 @@
 /** @format */
 
-// ! Import Global Rules
-@use "scss/layout/global-rules";
-
 // ! Import Variables
 @use "scss/variables/colors" as *;
 @use "scss/variables/times" as *;
 
-// ! Import Mixins
-@use "scss/helpers/mixin" as *;
-
 // ! Import Sidebar
 @use "scss/pages/sidebar";
 @use "scss/pages/dashboard";
-
-// ! Import Functions
-@use "scss/helpers/animation" as *;
+@use "scss/pages/plans";
+@use "scss/pages/projects";
 
 .sidebar.dark {
   background-color: #141824 !important;
@@ -70,7 +63,10 @@
   .log-out {
     span {
       a {
-        color: white !important;
+        color: white;
+      }
+      a:hover {
+        color: $red-color !important;
       }
     }
   }
@@ -146,7 +142,8 @@
 
   .dashboard-page,
   .plans-page,
-  .projects-page {
+  .projects-page,
+  .files-page {
     background-color: #0f111a;
   }
 
@@ -522,4 +519,43 @@
     }
   }
   // ! End Projects Table Section
+  // ! Start Files Page
+  .statistics {
+    background-color: #141824;
+
+    h4 {
+      color: white;
+    }
+
+    .data {
+      border-color: black;
+      color: white;
+
+      .info {
+        .num {
+          color: $grey-color;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .files-content {
+    .file {
+      background-color: #141824;
+      .name {
+        color: white;
+      }
+    }
+
+    .file:hover .info {
+      border-color: $blue-alt-color;
+    }
+
+    .info {
+      border-color: black;
+    }
+  }
+  // ! End Files Page
 }

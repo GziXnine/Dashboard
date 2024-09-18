@@ -16,6 +16,7 @@
   .projects-page {
     background-color: #f1f2f6;
     padding: 20px;
+    padding-top: 0 !important;
 
     @media (max-width: 767px) {
       padding: 10px;
@@ -97,6 +98,10 @@
         border-bottom: 1px solid #eee;
         justify-content: end;
 
+        @media (max-width: 767px) {
+          flex-direction: column !important;
+        }
+
         span {
           font-size: 13px;
           border-radius: 6px;
@@ -132,6 +137,10 @@
           -ms-border-radius: 4px;
           -o-border-radius: 4px;
           overflow: hidden;
+
+          @media (max-width: 767px) {
+            width: 220px !important;
+          }
 
           span {
             display: block;

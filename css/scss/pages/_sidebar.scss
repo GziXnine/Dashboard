@@ -6,3 +6,190 @@
 
 // ! Import Functions
 @use "../helpers/animation" as *;
+
+.sidebar {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  min-height: 100vh;
+
+  @media (max-width: 767px) {
+    width: 58px;
+    padding: 10px;
+  }
+
+  .holder {
+    width: 180px;
+    height: 100vh;
+
+    @media (max-width: 767px) {
+      width: 36px;
+    }
+
+    & > h3 {
+      margin-bottom: 40px;
+      font-size: 20px;
+
+      &:hover {
+        color: $blue-color;
+
+        &::after,
+        &::before {
+          background-color: $blue-color;
+        }
+      }
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        left: -3px;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &::before {
+        width: 80px;
+        height: 2px;
+        bottom: -20px;
+      }
+      &::after {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        bottom: -30px;
+        border: 4px solid rgb(255, 255, 255) !important;
+      }
+    }
+
+    .links {
+      margin-top: 20px;
+
+      @media (max-width: 767px) {
+        margin-top: -30px;
+      }
+
+      ul {
+        margin-top: 50px !important;
+        li {
+          margin-left: -3px;
+
+          a {
+            display: block;
+            padding: 8px 16px 8px 15px;
+            transition: 0.3s;
+            margin-bottom: 5px;
+            transition: $transition_time3;
+            -webkit-transition: $transition_time3;
+            -moz-transition: $transition_time3;
+            -ms-transition: $transition_time3;
+            -o-transition: $transition_time3;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            font-weight: 500;
+
+            &:hover,
+            &.active {
+              background-color: #f6f6f6;
+            }
+
+            svg {
+              font-size: 14px;
+            }
+
+            span {
+              font-size: 14px;
+              margin-left: 10px;
+              transition: $transition_time3;
+              -webkit-transition: $transition_time3;
+              -moz-transition: $transition_time3;
+              -ms-transition: $transition_time3;
+              -o-transition: $transition_time3;
+
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+          }
+          &:hover {
+            svg {
+              color: $blue-color !important;
+            }
+            span {
+              transform: translateX(10px);
+              -webkit-transform: translateX(10px);
+              -moz-transform: translateX(10px);
+              -ms-transform: translateX(10px);
+              -o-transform: translateX(10px);
+              color: black !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .log-out {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    margin-left: 40px;
+
+    @media (max-width: 767px) {
+      margin-left: 10px;
+    }
+
+    svg {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      margin-right: 2px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+
+      a {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+
+      a:hover {
+        color: $red-color !important;
+      }
+    }
+
+    &:hover {
+      svg {
+        animation: left-right $transition_time6 infinite;
+        -webkit-animation: left-right $transition_time6 infinite;
+      }
+      a {
+        color: red;
+      }
+    }
+  }
+}

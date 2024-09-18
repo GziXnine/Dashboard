@@ -16,6 +16,7 @@
   .plans-page {
     background-color: #f1f2f6;
     padding: 20px;
+    padding-top: 0 !important;
 
     @media (max-width: 767px) {
       padding: 10px;
