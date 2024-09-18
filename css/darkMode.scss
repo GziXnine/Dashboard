@@ -172,7 +172,8 @@
   .plans-page,
   .projects-page,
   .files-page,
-  .friends-page {
+  .friends-page,
+  .courses-page {
     background-color: #0f111a;
   }
 
@@ -610,4 +611,25 @@
     }
   }
   // ! End Friend Page
+  // ! Start Courses Page
+  .course {
+    background: #141824;
+
+    .instructor {
+      border-color: black;
+    }
+
+    h4 {
+      color: white;
+    }
+
+    .info {
+      border-color: black;
+
+      span {
+        color: white;
+      }
+    }
+  }
+  // ! End Courses Page
 }

@@ -1,0 +1,138 @@
+/** @format */
+
+// ! Import Variables
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
+// ! Import Functions
+@use "../helpers/animation" as *;
+
+// ! Import Mixins
+@use "../helpers/mixin" as *;
+
+.dashboard {
+  background-color: #f1f2f6;
+
+  .courses-page {
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #f1f2f6;
+    padding: 20px;
+    padding-top: 0 !important;
+
+    @media (max-width: 767px) {
+      grid-template-columns: minmax(200px, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .course {
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      background: white;
+      position: relative;
+      overflow: hidden;
+
+      .cover {
+        width: 100%;
+      }
+
+      .instructor {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 65px;
+        height: 65px;
+        transition: $transition_time3;
+        -webkit-transition: $transition_time3;
+        -moz-transition: $transition_time3;
+        -ms-transition: $transition_time3;
+        -o-transition: $transition_time3;
+        border: 2px solid white;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+
+        &:hover {
+          transform: scale(1.1) rotate(5deg);
+          -webkit-transform: scale(1.1) rotate(5deg);
+          -moz-transform: scale(1.1) rotate(5deg);
+          -ms-transform: scale(1.1) rotate(5deg);
+          -o-transform: scale(1.1) rotate(5deg);
+        }
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: bolder;
+        margin: 10px 0 15px;
+        letter-spacing: -1px;
+      }
+
+      .description {
+        color: $grey-color;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        color: $grey-color;
+        font-weight: 500;
+        position: relative;
+        padding: 15px;
+        border-top: 1px solid #eee;
+
+        .title {
+          border: none;
+          outline: none;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          color: white;
+          font-size: 13px;
+          padding: 4px 9px;
+          font-weight: 500;
+          position: absolute;
+          top: -13px;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          cursor: pointer;
+          background-color: $blue-color;
+
+          &:hover {
+            background-color: $blue-alt-color;
+          }
+        }
+
+        .fa-user {
+          color: $blue-color;
+        }
+
+        .fa-dollar-sign {
+          color: $green-color;
+        }
+      }
+    }
+  }
+}
