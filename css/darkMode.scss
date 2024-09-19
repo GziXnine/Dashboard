@@ -4,12 +4,6 @@
 @use "scss/variables/colors" as *;
 @use "scss/variables/times" as *;
 
-// ! Import Sidebar
-@use "scss/pages/sidebar";
-@use "scss/pages/dashboard";
-@use "scss/pages/plans";
-@use "scss/pages/projects";
-
 .sidebar.dark {
   background-color: #141824 !important;
   box-shadow: 0 0 3px rgba(192, 172, 172, 0.6) !important;
@@ -173,7 +167,8 @@
   .projects-page,
   .files-page,
   .friends-page,
-  .courses-page {
+  .courses-page,
+  .settings-page {
     background-color: #0f111a;
   }
 
@@ -509,6 +504,104 @@
       }
     }
     // ! End Page Projects
+    // ! Start Settings Page
+    .settings {
+      background-color: #141824;
+
+      h2,
+      .white {
+        color: white;
+      }
+
+      textarea {
+        border-color: black;
+        color: white;
+        background-color: #3e465b;
+
+        &::placeholder {
+          color: white;
+        }
+
+        &:focus {
+          border-color: $blue-color;
+        }
+      }
+
+      label {
+        & + input {
+          border: 1px solid black;
+          background-color: #3e465b;
+
+          &::placeholder {
+            color: white;
+          }
+
+          &:focus {
+            border-color: $blue-color;
+          }
+
+          &.email {
+            background-color: rgba(70, 5, 5, 0.226);
+            color: rgb(131, 130, 196);
+          }
+        }
+      }
+
+      .sec-box {
+        border-color: black;
+      }
+    }
+    .social-boxes {
+      svg {
+        color: black;
+        background-color: #3e465b;
+        border-color: #9aabd1;
+
+        & + input {
+          border-color: #9aabd1;
+          background-color: #3e465b;
+
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
+
+      & > div:focus-within svg {
+        color: white;
+      }
+    }
+    .widgets-control {
+      .control {
+        label {
+          color: white;
+        }
+      }
+    }
+    .backup-control {
+      .date {
+        label {
+          color: white;
+        }
+      }
+
+      .servers {
+        border-color: black;
+
+        &:hover {
+          border-color: $blue-alt-color;
+        }
+
+        .server {
+          border: 2px solid $grey-color;
+
+          label {
+            color: white;
+          }
+        }
+      }
+    }
+    // ! End Settings Page
   }
 
   // ! Start Projects Table Section

@@ -7,98 +7,101 @@
   <title>Dashboard | Settings</title>
   <!-- ! Page Title Icon -->
   <link rel="icon" href="images/chart-line-solid.svg">
+  <!-- ! Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Main Template CSS File -->
-  <link rel="stylesheet" href="css/framework.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/framework.min.css">
+  <link rel="stylesheet" href="css/darkMode.min.css">
   <!-- ! File Of Animations -->
   <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
   <!-- ! Render All Elements Normally -->
   <link rel="stylesheet" href="css/normalize.min.css">
   <!-- ! Font Awesome Library -->
   <link rel="stylesheet" href="css/all.min.css">
-  <!-- ! Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ! Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+  <script>
+    window.onload = function () {
+      AOS.init();
+    };
+  </script>
 </head>
 
 <body>
   <div class="dashboard d-flex">
     <!-- ! Start Sidebar -->
     <div class="sidebar bg-white position-relative">
-      <h3 class="position-relative text-center fw-bold text-black">Allam</h3>
-      <div class="links">
-        <ul>
-          <li>
-            <a class="active d-flex align-items-center" href="index.html">
-              <i class="fa-regular fa-chart-bar fa-fw"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="settings.html">
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span>Settings</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="profile.html">
-              <i class="fa-regular fa-user fa-fw"></i>
-              <span>Profile</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="projects.html">
-              <i class="fa-solid fa-diagram-project fa-fw"></i>
-              <span>Projects</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="statistics.html">
-              <i class="fa-solid fa-chart-simple fa-fw"></i>
-              <span>Statistics</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="courses.html">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Courses</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="friends.html">
-              <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span>Friends</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="files.html">
-              <i class="fa-regular fa-file fa-fw"></i>
-              <span>Files</span>
-            </a>
-          </li>
-          <li>
-            <a class="d-flex align-items-center" href="plans.html">
-              <i class="fa-regular fa-credit-card fa-fw"></i>
-              <span>Plans</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- 
-        <div class="toggle-theme">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </div> 
-      -->
-      <div class="log-out">
-        <span>
-          <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
-          <a href="">Log out</a>
-        </span>
+      <div class="holder position-fixed">
+        <h3 class="position-relative text-center fw-bold">Allam</h3>
+        <div class="links">
+          <ul>
+            <li>
+              <a class="d-flex align-items-center" href="index.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a class="active d-flex align-items-center" href="settings.html">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="statistics.html">
+                <i class="fa-solid fa-chart-simple fa-fw"></i>
+                <span>Statistics</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Courses</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <span>Friends</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <span>Files</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex align-items-center" href="plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <span>Plans</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="log-out">
+          <span>
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #e10000;"></i>
+            <a href="">Log out</a>
+          </span>
+        </div>
       </div>
     </div>
     <!-- ! End Sidebar -->
@@ -110,8 +113,78 @@
           <input type="text" id="keywordInput" placeholder="Type A Keyword" name="keyword">
           <i class="fa-solid fa-search"></i>
         </div>
+        <button id="darkmode-button" class="btn rounded-circle">
+          <i class="fa-solid fa-moon toggle-icon"></i>
+        </button>
         <div class="notifications d-flex align-items-center">
           <i class="fa-regular fa-bell fa-lg"></i>
+        </div>
+        <div id="notif-container" class="notif-container">
+          <ul id="notif-list" class="show">
+            <h4>Notifications</h4>
+            <li>
+              <a href="https://gzixnine.github.io/Template_Three/#events" target="_blank">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>It's Ahmed Allam's birthday!</span>
+                  <span>12 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="images/team-01.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>19 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Ahlam reacted to your post.</span>
+                  <span>23 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-04.png" alt="Avatar">
+                <div>
+                  <span>Asmaa reacted to your comment.</span>
+                  <span>7 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-05.png" alt="Avatar">
+                <div>
+                  <span>Ahmed sent you a friend request.</span>
+                  <span>10 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-02.png" alt="Avatar">
+                <div>
+                  <span>Ashraf invited you to a group.</span>
+                  <span>8 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/team-03.png" alt="Avatar">
+                <div>
+                  <span>Abbas replied to your comment.</span>
+                  <span>2 Hours Ago</span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="profile">
           <a href="profile.html">
@@ -123,10 +196,204 @@
       <!-- ! End Header -->
       <!-- ! Start Settings -->
       <h1 class="position-relative header-page">Settings</h1>
-      <div class="Settings">
+      <div class="settings-page">
+        <div class="wrapper">
+          <!-- TODO Start Settings Box -->
+          <div id="site-control-settings" class="settings mega" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h2 id="site-control-header" class="section-header">Site Control</h2>
+              <span id="site-control-description" class="section-des">Control The Website If There Is Maintenance</span>
+            </div>
+            <div id="website-control" class="mb-15 d-flex justify-content-between align-items-center">
+              <div>
+                <span class="white">Website Control</span>
+                <p>Open/Close Website And Type The Reason</p>
+              </div>
+              <div>
+                <label>
+                  <input id="website-control-toggle" class="toggle-checkbox" type="checkbox" checked
+                    autocomplete="off" />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <textarea id="close-message" class="close-message p-10 rad-6 w-full" placeholder="Close Message Content"
+              autocomplete="on"></textarea>
+          </div>
+          <!-- ! End Settings Box -->
+          <!-- TODO Start Settings Box -->
+          <div id="general-info" class="settings mega" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h2 id="general-header" class="section-header">General Info</h2>
+              <span id="general-description" class="section-des">General Information About Your Account</span>
+            </div>
+
+            <div id="first-name-section" class="mb-15">
+              <label for="first-name">First Name</label>
+              <input id="first-name" name="first-name" type="text" placeholder="First Name" aria-label="First Name"
+                autocomplete="given-name" />
+            </div>
+
+            <div id="last-name-section" class="mb-15">
+              <label for="last-name">Last Name</label>
+              <input id="last-name" name="last-name" type="text" placeholder="Last Name" aria-label="Last Name"
+                autocomplete="family-name" />
+            </div>
+
+            <div id="email-section">
+              <label for="email-address">Email</label>
+              <input id="email-address" class="email" name="email" type="email" value="ahmallam@std.mans.edu.eg"
+                aria-label="Email Address" autocomplete="email" disabled />
+              <a id="change-email" class="change" href="#">Change</a>
+            </div>
+          </div>
+          <!-- ! End Settings Box -->
+          <!-- TODO Start Settings Box -->
+          <div class="settings mega" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <h2 class="section-header">Security Info</h2>
+              <span class="section-des">Security Information About Your Account</span>
+            </div>
+            <div class="sec-box mb-15 d-flex justify-content-between align-items-center">
+              <div>
+                <span class="white">Password</span>
+                <p>Last Change On 25/10/2021</p>
+              </div>
+              <a class="click" href="#">Change</a>
+            </div>
+            <div class="sec-box mb-15 d-flex justify-content-between align-items-center">
+              <div>
+                <span class="white">Two-Factor Authentication</span>
+                <p>Enable/Disable The Feature</p>
+              </div>
+              <div>
+                <label>
+                  <input id="website-control-toggle1" class="toggle-checkbox" type="checkbox" checked
+                    autocomplete="off" />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <div class="sec-box d-flex justify-content-between align-items-center">
+              <div>
+                <span class="white">Devices</span>
+                <p>Check The Login Devices List</p>
+              </div>
+              <a class="click2" href="#">Devices</a>
+            </div>
+          </div>
+          <!-- ! End Settings Box -->
+          <!-- TODO Start Settings Box -->
+          <div id="social-boxes" class="social-boxes settings mega" data-aos="fade-up" data-aos-delay="500">
+            <div>
+              <h2 id="social-header" class="section-header">Social Info</h2>
+              <span id="social-description" class="section-des">Social Media Information</span>
+            </div>
+
+            <div id="twitter-section" class="d-flex align-items-center mb-15">
+              <i class="fa-brands fa-twitter center-flex" aria-hidden="true"></i>
+              <input id="twitter-username" name="twitter" type="text" placeholder="Twitter Username"
+                aria-label="Twitter Username" autocomplete="username twitter" />
+            </div>
+
+            <div id="facebook-section" class="d-flex align-items-center mb-15">
+              <i class="fa-brands fa-facebook-f center-flex" aria-hidden="true"></i>
+              <input id="facebook-username" name="facebook" type="text" placeholder="Facebook Username"
+                aria-label="Facebook Username" autocomplete="username facebook" />
+            </div>
+
+            <div id="linkedin-section" class="d-flex align-items-center mb-15">
+              <i class="fa-brands fa-linkedin center-flex" aria-hidden="true"></i>
+              <input id="linkedin-username" name="linkedin" type="text" placeholder="LinkedIn Username"
+                aria-label="LinkedIn Username" autocomplete="username linkedin" />
+            </div>
+
+            <div id="youtube-section" class="d-flex align-items-center">
+              <i class="fa-brands fa-youtube center-flex" aria-hidden="true"></i>
+              <input id="youtube-username" name="youtube" type="text" placeholder="YouTube Username"
+                aria-label="YouTube Username" autocomplete="username youtube" />
+            </div>
+          </div>
+          <!-- ! End Settings Box -->
+          <!-- TODO Start Settings Box -->
+          <div class="widgets-control settings mega" data-aos="fade-up" data-aos-delay="600">
+            <div>
+              <h2 class="section-header">Widgets Control</h2>
+              <span class="section-des">Show/Hide Widgets</span>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="one" checked />
+              <label for="one">Quick Draft</label>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="two" checked />
+              <label for="two">Yearly Targets</label>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="three" checked />
+              <label for="three">Tickets Statistics</label>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="four" checked />
+              <label for="four">Latest News</label>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="five" />
+              <label for="five">Latest Tasks</label>
+            </div>
+            <div class="control d-flex align-items-center">
+              <input type="checkbox" id="six" checked />
+              <label for="six">Top Search Items</label>
+            </div>
+          </div>
+          <!-- ! End Settings Box -->
+          <!-- TODO Start Settings Box -->
+          <div class="backup-control settings mega" data-aos="fade-up" data-aos-delay="700">
+            <div>
+              <h2 class="section-header">Backup Manager</h2>
+              <span class="section-des">Control Backup Time And Location</span>
+            </div>
+            <div class="date d-flex align-items-center">
+              <input type="radio" name="time" id="daily" checked />
+              <label for="daily">Daily</label>
+            </div>
+            <div class="date d-flex align-items-center">
+              <input type="radio" name="time" id="weekly" />
+              <label for="weekly">Weekly</label>
+            </div>
+            <div class="date d-flex align-items-center">
+              <input type="radio" name="time" id="monthly" />
+              <label for="monthly">Monthly</label>
+            </div>
+            <div class="servers d-flex align-items-center">
+              <input type="radio" name="servers" id="server-one" />
+              <div class="server">
+                <label for="server-one">
+                  <i class="fa-solid fa-server"></i>
+                  Megaman
+                </label>
+              </div>
+              <input type="radio" name="servers" id="server-two" checked />
+              <div class="server">
+                <label for="server-two">
+                  <i class="fa-solid fa-server"></i>
+                  Zero
+                </label>
+              </div>
+              <input type="radio" name="servers" id="server-three" />
+              <div class="server">
+                <label for="server-three">
+                  <i class="fa-solid fa-server"></i>
+                  Sigma
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- ! End Settings Box -->
+        </div>
       </div>
-      <!-- ! End Settings -->
     </div>
+    <!-- ! End Settings -->
   </div>
   <!-- ! End Content -->
   <!---------------------------------------------------------------------------->
@@ -136,6 +403,7 @@
   <!-- ! JavaScript File -->
   <script src="js/main.js"></script>
   <script src="js/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
