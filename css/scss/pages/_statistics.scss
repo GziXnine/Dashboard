@@ -1,0 +1,27 @@
+/** @format */
+
+.statistics-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  h2 {
+    font-size: 70px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #495064;
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    @media (max-width: 767px) {
+      font-size: 50px;
+    }
+  }
+}
