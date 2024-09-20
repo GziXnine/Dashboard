@@ -1,1 +1,300 @@
 /** @format */
+
+// ! Import Variables
+@use "../variables/colors" as *;
+@use "../variables/times" as *;
+
+// ! Import Functions
+@use "../helpers/animation" as *;
+
+// ! Import Mixins
+@use "../helpers/mixin" as *;
+
+.dashboard {
+  background-color: #f1f2f6;
+
+  .Profile-page {
+    background-color: #f1f2f6;
+    padding: 18px !important;
+    padding-top: 0 !important;
+
+    @media (max-width: 767px) {
+      padding: 8px !important;
+    }
+  }
+
+  .overview {
+    padding: 0 0 0 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .avatar-box {
+      text-align: center;
+      padding: 20px;
+      width: 300px;
+
+      @media (min-width: 768px) {
+        border-right: 1px solid #eee;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+        transition: $transition_time3;
+        -webkit-transition: $transition_time3;
+        -moz-transition: $transition_time3;
+        -ms-transition: $transition_time3;
+        -o-transition: $transition_time3;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1) rotate(5deg);
+          -webkit-transform: scale(1.1) rotate(5deg);
+          -moz-transform: scale(1.1) rotate(5deg);
+          -ms-transform: scale(1.1) rotate(5deg);
+          -o-transform: scale(1.1) rotate(5deg);
+        }
+      }
+      .steps {
+        color: $grey-color;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+      .name {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .level {
+        background-color: #eee;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        height: 6px;
+        width: 70%;
+        margin: 10px auto;
+        overflow: hidden;
+
+        span {
+          display: block;
+          height: 100%;
+          background-color: $blue-color;
+          border-radius: 6px;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          -o-border-radius: 6px;
+        }
+      }
+
+      .rating {
+        font-size: 14px;
+      }
+
+      .rat {
+        font-size: 13px;
+        color: $grey-color;
+        margin-top: 10px;
+      }
+    }
+    .info-box {
+      width: 100%;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+
+      .box {
+        flex-wrap: wrap;
+        padding: 20px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+
+        & > div {
+          padding: 10px 0 0;
+          color: black;
+          display: block;
+
+          @media (min-width: 768px) {
+            min-width: 250px;
+          }
+        }
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #eee;
+        }
+
+        &:hover {
+          background-color: #f9f9f9;
+        }
+
+        .heading {
+          color: $grey-color;
+          font-size: 15px;
+          width: 100%;
+          margin: 0;
+        }
+
+        .c-grey,
+        .c-grey + span {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      .toggle {
+        display: block;
+      }
+      .toggle-switch {
+        height: 21px;
+        width: 72px;
+
+        @media (max-width: 767px) {
+          margin: auto;
+        }
+      }
+      .toggle-switch::before {
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+      }
+      .toggle-checkbox:checked + .toggle-switch::before {
+        left: 54px;
+      }
+    }
+  }
+
+  .other-data {
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skills-card {
+      flex-grow: 1;
+      padding: 20px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      background-color: white;
+      overflow: hidden;
+
+      ul {
+        li {
+          padding: 15px 0;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #eee;
+          }
+
+          span {
+            display: inline-flex;
+            padding: 4px 10px;
+            background-color: #eee;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:not(:last-child) {
+              margin-right: 5px;
+            }
+          }
+        }
+        &.course {
+          color: black;
+
+          @media (max-width: 767px) {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .activities {
+      flex-grow: 2;
+      padding: 20px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      background-color: white;
+      overflow: hidden;
+
+      .activity {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 767px) {
+          text-align: center;
+          flex-direction: column;
+        }
+
+        img {
+          width: 64px;
+          height: 64px;
+          margin-right: 10px;
+
+          @media (max-width: 767px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+          }
+        }
+
+        .info {
+          .span {
+            margin-bottom: 10px;
+            color: black;
+            font-weight: 500;
+
+            & + span {
+              color: $grey-color;
+              font-weight: 500;
+            }
+          }
+        }
+        .date {
+          font-size: 15px;
+
+          @media (min-width: 768px) {
+            margin-left: auto;
+            text-align: right;
+          }
+
+          @media (max-width: 767px) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -168,7 +168,8 @@
   .files-page,
   .friends-page,
   .courses-page,
-  .settings-page {
+  .settings-page,
+  .Profile-page {
     background-color: #0f111a;
   }
 
@@ -725,4 +726,86 @@
     }
   }
   // ! End Courses Page
+  // ! Start Profile Page
+  .overview {
+    background-color: #141824;
+
+    .avatar-box {
+      @media (min-width: 768px) {
+        border-color: black;
+      }
+
+      .name,
+      .rat {
+        color: white;
+      }
+    }
+    .info-box {
+      .box {
+        & > div {
+          color: white;
+        }
+
+        &:not(:last-of-type) {
+          border-color: black;
+        }
+
+        &:hover {
+          background-color: #252c41;
+        }
+      }
+    }
+  }
+  .other-data {
+    .skills-card {
+      background-color: #141824;
+
+      h2 {
+        color: white;
+      }
+
+      ul {
+        li {
+          &:not(:last-child) {
+            border-color: black;
+          }
+
+          &:hover {
+            border-color: $blue-color;
+          }
+          span {
+            background-color: #252c41;
+            color: white;
+          }
+        }
+      }
+    }
+    .activities {
+      background-color: #141824;
+
+      h2 {
+        color: white;
+      }
+
+      .activity {
+        &:not(:last-of-type) {
+          border-color: black;
+        }
+
+        &:hover {
+          border-color: $blue-color;
+        }
+
+        .info {
+          .span {
+            color: white;
+          }
+        }
+        .date {
+          color: $grey-color;
+        }
+      }
+    }
+  }
+  // ! End Profile Page
 }
